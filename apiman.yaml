@@ -1,0 +1,12 @@
+version: '2'
+services:
+  apiman:
+    image: apiman/on-wildfly:2.2.3.Final
+
+    volumes:
+      - ./configuration:/opt/jboss/wildfly/standalone/configuration
+
+    ports:
+      - 9990:9990
+      - 8080:8080
+      - 8443:8443
